@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سطر — إحصائيات الكود</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f6f9;color:#18243a;font:16px system-ui,Tahoma,sans-serif}button,input{font:inherit}header{background:#101d30;color:#fff}.nav,main{max-width:1180px;margin:auto;padding-inline:28px}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:23px}.mark{display:grid;place-items:center;background:#5de0bf;color:#10273b;border-radius:10px;width:39px;height:39px;font:bold 16px monospace}.nav-actions{display:flex;align-items:center;gap:14px}.language-button{background:#ffffff10;color:#fff;border:1px solid #65758b;border-radius:8px;padding:5px 10px;cursor:pointer}.privacy{color:#d1e2ee;font-size:13px}.privacy:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#5de0bf;margin-inline-end:8px}main{padding-block:32px 50px}.hero{background:radial-gradient(ellipse at left bottom,#164d58,transparent 62%),#112239;border-radius:22px;color:#fff;padding:36px;display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:34px}.hero h1{font-size:clamp(30px,4vw,46px);line-height:1.2;margin:0 0 14px}.hero p{color:#c4d6e4;margin:0;line-height:1.8}.picker{border:1px dashed #6ca1a7;border-radius:15px;background:#ffffff09;padding:19px;text-align:center}.picker b{display:block;margin-bottom:12px}.picker button{border:0;border-radius:9px;padding:9px 19px;background:#5de0bf;color:#11263b;font-weight:750;cursor:pointer}.picker button:disabled{opacity:.55;cursor:wait}.picker small{display:block;color:#c4d6e4;margin-top:9px}.status{min-height:25px;margin:8px 0;color:#685020;font-size:14px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}h2{font-size:21px;margin:0}.tag{background:#e3eaf2;color:#324b65}.tag,.demo{padding:5px 10px;border-radius:7px;font-size:12px}.demo{background:#e9f7f2;color:#145b4a}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:20px}.card,.panel{background:white;border:1px solid #e0e6ee;border-radius:15px}.card{padding:16px 20px}.card span{color:#56667c;font-size:14px;display:block}.card strong{display:inline-block;font-size:31px;margin-top:4px;font-variant-numeric:tabular-nums}.content{display:grid;grid-template-columns:1.9fr 1fr;gap:17px;align-items:start}.panel{min-width:0;overflow:hidden}.panel h2{padding:17px 19px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{text-align:start;padding:11px 16px;border-bottom:1px solid #edf0f5}th{background:#f7f9fc;color:#53647a;font-size:13px}td{font-size:14px}.bar{height:7px;width:72px;background:#e9eff4;border-radius:20px;display:inline-block;vertical-align:middle;margin-inline-end:7px;overflow:hidden}.bar i{height:100%;background:#20a88a;display:block;border-radius:20px}.note{font-size:13px;line-height:1.65;color:#55677e;margin:13px 17px}.history{list-style:none;margin:0;padding:0 16px 12px}.history button{cursor:pointer;text-align:start;color:inherit;background:#f5f8fc;border:1px solid #e6ecf3;border-radius:9px;padding:10px;width:100%;margin-bottom:8px;overflow-wrap:anywhere}.history time,.history small{display:block;color:#56667c;font-size:12px;margin-top:4px}button:focus-visible{outline:3px solid #198ac0;outline-offset:3px}#name{overflow-wrap:anywhere}@media(max-width:720px){.hero,.content{grid-template-columns:1fr}.hero{padding:22px;gap:20px}.nav,main{padding-inline:14px}.card{padding:11px}.card span{font-size:12px}.card strong{font-size:23px}.metrics{gap:7px}.bar{width:35px}}
+
+:root { --accent: #5de0bf; --accent-text: #10273b; }
+.mark, .privacy:before, .picker button, .bar i { background: var(--accent); }
+.mark, .picker button { color: var(--accent-text); }
+.hero { background: radial-gradient(ellipse at left bottom,color-mix(in srgb,var(--accent) 23%,transparent),transparent 62%),#112239; }
+.appearance { display:flex; justify-content:flex-end; flex-wrap:wrap; gap:10px 18px; margin-bottom:16px; }
+.appearance label { display:inline-flex; align-items:center; gap:8px; font-size:14px; }
+.appearance select, .appearance input, .history-actions button { font:inherit; color:inherit; background:transparent; border:1px solid #8b9ab0; border-radius:7px; padding:4px 8px; }
+.appearance input[type=color] { width:42px; height:30px; padding:2px; cursor:pointer; }
+.history li { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+.history li button { margin:0; }
+.history input { width:17px; height:17px; flex:none; accent-color:var(--accent); }
+.history-actions { display:flex; margin:0 16px 12px; }
+.history-actions[hidden] { display:none; }
+.history-actions button { cursor:pointer; color:#922d3b; }
+.history-actions button:disabled { opacity:.55; cursor:default; }
+[data-theme=dark] { color-scheme:dark; }
+[data-theme=dark] body { background:#0c1422; color:#e4edf7; }
+[data-theme=dark] .card, [data-theme=dark] .panel { background:#142238; border-color:#2f4158; }
+[data-theme=dark] .history button, [data-theme=dark] th { background:#1e3047; border-color:#354963; }
+[data-theme=dark] td { border-color:#2f4158; }
+[data-theme=dark] .note, [data-theme=dark] .card span, [data-theme=dark] th,
+[data-theme=dark] .history time, [data-theme=dark] .history small { color:#bed0e4; }
+[data-theme=dark] .bar { background:#30435b; }
+[data-theme=dark] .demo { background:#203c3b; color:#c9eee4; }
+[data-theme=dark] .status { color:#f6dba9; }
+[data-theme=dark] .history-actions button { color:#ffb4bf; }
+@media(max-width:420px) { .privacy { display:none; } }
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand"><span class="mark" aria-hidden="true">&lt;/&gt;</span> <span data-label="brand">سطر</span></div><div class="nav-actions"><span class="privacy" data-label="privacy">ملفاتك تبقى على جهازك</span><button id="language" class="language-button" type="button" lang="en">English</button></div></div></header>
+<main>
+<div class="appearance">
+  <label><span data-label="theme">النمط</span>
+    <select id="theme"><option value="light" data-label="light">فاتح</option><option value="dark" data-label="dark">ليلي</option></select>
+  </label>
+  <label><span data-label="accent">لون الواجهة</span><input id="accent" type="color" value="#5de0bf"></label>
+</div>
+<section class="hero"><div><h1 data-label="heading">إحصائيات الكود</h1><p data-label="intro">اختر مجلد مشروعك واعرف عدد الملفات وأسطر الكود وتوزيعها حسب اللغة.</p></div>
+<div class="picker"><b data-label="folder">مجلد المشروع</b><button id="choose" data-label="choose" type="button">اختيار مجلد</button><input id="files" type="file" webkitdirectory multiple hidden><small data-label="recursive">يشمل المجلدات الفرعية</small></div></section>
+<p id="status" class="status" role="status"></p>
+<section aria-labelledby="name">
+<div class="section-title"><h2 id="name"></h2><span id="badge" class="demo"></span></div>
+<div class="metrics">
+<div class="card"><span data-label="totalLines">إجمالي أسطر الكود</span><strong id="lines"></strong></div>
+<div class="card"><span data-label="codeFiles">عدد ملفات الكود</span><strong id="count"></strong></div>
+<div class="card"><span data-label="languageCount">عدد اللغات</span><strong id="languages"></strong></div>
+</div>
+<div class="content">
+<section class="panel"><h2 data-label="breakdown">التوزيع حسب اللغة</h2><div class="scroll"><table><thead><tr><th scope="col" data-label="language">اللغة</th><th scope="col" data-label="lines">الأسطر</th><th scope="col" data-label="files">الملفات</th><th scope="col" data-label="share">النسبة</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="note" id="details"></p></section>
+<aside class="panel"><h2 data-label="history">سجل التحليلات</h2><p class="note" data-label="historyNote">تظهر هنا التحليلات المحفوظة في هذا المتصفح.</p><div class="history-actions" id="history-actions" hidden><button id="delete-selected" type="button" data-label="remove" disabled>حذف المحدد</button></div><ul class="history" id="history"></ul></aside>
+</div>
+</section>
+</main>
+<script>
+const extensionGroups = {
+  JavaScript:'js mjs cjs jsx', TypeScript:'ts mts cts tsx', HTML:'html htm', CSS:'css scss sass less',
+  Python:'py pyw', Java:'java', Kotlin:'kt kts', 'C#':'cs', 'C++':'cpp cc cxx hpp hh hxx', C:'c h',
+  Go:'go', Rust:'rs', Ruby:'rb rake', PHP:'php phtml', Swift:'swift', Dart:'dart', SQL:'sql',
+  Shell:'sh bash zsh fish', PowerShell:'ps1 psm1', Lua:'lua', R:'r', Scala:'scala', Perl:'pl pm',
+  Vue:'vue', Svelte:'svelte', Astro:'astro', Elixir:'ex exs', Erlang:'erl hrl', Haskell:'hs',
+  Zig:'zig', 'Objective-C':'m mm', Assembly:'asm s', Solidity:'sol', MATLAB:'matlab',
+  JSON:'json jsonc', YAML:'yaml yml', TOML:'toml', XML:'xml xsl xsd', GraphQL:'graphql gql',
+  Dockerfile:'dockerfile', Makefile:'mk', 'Protocol Buffers':'proto', 'Visual Basic':'vb', 'Batch':'bat cmd'
+};
+const extensions = new Map(Object.entries(extensionGroups).flatMap(([name, list]) => list.split(' ').map(ext => [ext, name])));
+const specialNames = new Map([['dockerfile','Dockerfile'],['makefile','Makefile'],['gemfile','Ruby'],['rakefile','Ruby']]);
+const ignoredFolders = new Set(['.git','.hg','.svn','node_modules','.venv','__pycache__','.next','.nuxt','coverage','dist','build','target']);
+const storeKey = 'satr.history.v1';
+const el = id => document.getElementById(id);
+const format = new Intl.NumberFormat('en');
+
+const englishLabels = {
+  brand:'Satr', privacy:'Files stay on your device', heading:'Code statistics',
+  intro:'Choose a project folder to count files and see how lines of code are distributed across languages.',
+  folder:'Project folder', choose:'Choose folder', recursive:'Includes subfolders',
+  totalLines:'Total lines of code', codeFiles:'Code files', languageCount:'Languages',
+  breakdown:'Language breakdown', language:'Language', lines:'Lines', files:'Files',
+  theme:'Theme', light:'Light', dark:'Dark', accent:'Accent color', remove:'Delete selected',
+  share:'Share', history:'Analysis history', historyNote:'Saved analyses appear here for this browser.'
+};
+const arabicLabels = Object.fromEntries(
+  [...document.querySelectorAll('[data-label]')].map(node => [node.dataset.label, node.textContent])
+);
+let english = false;
+try { english = localStorage.getItem('satr.language') === 'en'; } catch {}
+let currentReport;
+let status = '';
+let progress = [];
+function translate(arabic, englishText) { return english ? englishText : arabic; }
+function renderStatus() {
+  const messages = {
+    progress: translate('جاري التحليل…', 'Analyzing…') + ' ' + progress.join(' / '),
+    saved: translate('اكتمل التحليل وحُفظ في السجل.', 'Analysis complete and saved to history.'),
+    temporary: translate('اكتمل التحليل. النتيجة محفوظة خلال الجلسة فقط.', 'Analysis complete. The result is available for this session only.'),
+    deleted: translate('حُذفت التحليلات المحددة.', 'Selected analyses were deleted.'),
+    deleteFailed: translate('تعذّر حفظ التغيير في سجل المتصفح.', 'Could not save the change to browser history.'),
+    failed: translate('تعذّر تحليل المجلد. جرّب اختياره مرة ثانية.', 'Could not analyze the folder. Try selecting it again.')
+  };
+  el('status').textContent = messages[status] || '';
+}
+function renderLanguage() {
+  document.documentElement.lang = translate('ar', 'en');
+  document.documentElement.dir = translate('rtl', 'ltr');
+  document.title = translate('سطر — إحصائيات الكود', 'Satr — Code statistics');
+  const labels = english ? englishLabels : arabicLabels;
+  for (const node of document.querySelectorAll('[data-label]')) node.textContent = labels[node.dataset.label];
+  el('language').textContent = translate('English', 'العربية');
+  el('language').lang = translate('en', 'ar');
+  render(currentReport);
+  renderHistory();
+  renderStatus();
+}
+
+const formatDate = date => new Intl.DateTimeFormat(translate('ar-SA', 'en'), {calendar:'gregory', dateStyle:'medium', timeStyle:'short'}).format(new Date(date));
+const example = {name:'متجر إلكتروني', files:48, included:42, failed:0, rows:[
+  {name:'TypeScript', lines:7460, files:23}, {name:'CSS', lines:2482, files:8},
+  {name:'HTML', lines:1316, files:6}, {name:'JavaScript', lines:802, files:3}, {name:'JSON', lines:420, files:2}
+]};
+function loadHistory() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(storeKey) || '[]');
+    return Array.isArray(saved) ? saved : [];
+  } catch { return []; }
+}
+let history = loadHistory();
+const selected = new Set();
+
+function applyAppearance() {
+  const theme = el('theme').value === 'dark' ? 'dark' : 'light';
+  const accent = el('accent').value;
+  const root = document.documentElement;
+  root.dataset.theme = theme;
+  root.style.setProperty('--accent', accent);
+
+  const channels = accent.slice(1).match(/../g).map(hex => parseInt(hex, 16) / 255);
+  const linear = channels.map(value => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4);
+  const luminance = linear[0] * 0.2126 + linear[1] * 0.7152 + linear[2] * 0.0722;
+  root.style.setProperty('--accent-text', luminance > 0.179 ? '#000' : '#fff');
+}
+
+try {
+  el('theme').value = localStorage.getItem('satr.theme') === 'dark' ? 'dark' : 'light';
+  const savedAccent = localStorage.getItem('satr.accent');
+  if (/^#[0-9a-f]{6}$/i.test(savedAccent)) el('accent').value = savedAccent;
+} catch {}
+applyAppearance();
+
+for (const id of ['theme', 'accent']) {
+  el(id).addEventListener('input', applyAppearance);
+  el(id).addEventListener('change', () => {
+    applyAppearance();
+    try { localStorage.setItem('satr.' + id, el(id).value); } catch {}
+  });
+}
+
+function updateSelection() {
+  el('delete-selected').disabled = !selected.size;
+}
+
+el('delete-selected').addEventListener('click', () => {
+  if (!selected.size) return;
+  const remaining = history.filter(report => !selected.has(report));
+  try {
+    localStorage.setItem(storeKey, JSON.stringify(remaining));
+  } catch {
+    status = 'deleteFailed';
+    renderStatus();
+    return;
+  }
+  const displayedWasDeleted = selected.has(currentReport);
+  history = remaining;
+  selected.clear();
+  if (displayedWasDeleted) render(history[0] || example);
+  renderHistory();
+  status = 'deleted';
+  renderStatus();
+});
+function countLines(source) {
+  let count = 0;
+  for (const line of source.split(/\r\n?|\n/)) {
+    if (line.trim()) count++;
+  }
+  return count;
+}
+async function analyze(files, onProgress = () => {}) {
+  const groups = new Map();
+  let included = 0;
+  let failed = 0;
+  for (const [index, file] of files.entries()) {
+    if (index % 50 === 0) {
+      onProgress(index, files.length);
+      await new Promise(resolve => setTimeout(resolve, 0));
+    }
+    const path = file.webkitRelativePath.split('/');
+    if (path.slice(1, -1).some(part => ignoredFolders.has(part.toLowerCase()))) continue;
+    const name = file.name.toLowerCase();
+    if (/\.min\.(js|css)$|^(package-lock\.json|npm-shrinkwrap\.json)$/.test(name)) continue;
+    const language = specialNames.get(name) || (name.includes('.') && extensions.get(name.split('.').pop()));
+    if (!language) continue;
+    try {
+      const lines = countLines(await file.text());
+      const group = groups.get(language) || {name:language, lines:0, files:0};
+      group.lines += lines;
+      group.files++;
+      groups.set(language, group);
+      included++;
+    } catch { failed++; }
+  }
+  return {name:files[0].webkitRelativePath.split('/')[0] || 'المشروع', date:new Date().toISOString(),
+    files:files.length, included, failed, rows:[...groups.values()].sort((a,b) => b.lines - a.lines || b.files - a.files || a.name.localeCompare(b.name))};
+}
+function render(report) {
+  currentReport = report;
+  const total = report.rows.reduce((sum, row) => sum + row.lines, 0);
+  el('name').textContent = report === example ? translate('متجر إلكتروني', 'Online store') : report.name;
+  el('badge').textContent = report === example ? translate('بيانات تجريبية', 'Sample data') : formatDate(report.date);
+  el('lines').textContent = format.format(total);
+  el('count').textContent = format.format(report.included);
+  el('languages').textContent = format.format(report.rows.length);
+  el('rows').replaceChildren();
+  for (const row of report.rows) {
+    const tr = el('rows').insertRow();
+    const name = tr.insertCell();
+    const label = document.createElement('bdi');
+    label.textContent = row.name;
+    name.append(label);
+    tr.insertCell().textContent = format.format(row.lines);
+    tr.insertCell().textContent = format.format(row.files);
+    const ratio = total ? row.lines / total * 100 : 0;
+    const cell = tr.insertCell();
+    const bar = document.createElement('span');
+    bar.className = 'bar';
+    bar.setAttribute('aria-hidden', 'true');
+    const fill = document.createElement('i');
+    fill.style.width = ratio + '%';
+    bar.append(fill);
+    cell.append(bar, format.format(Math.round(ratio)) + translate('٪', '%'));
+  }
+  if (!report.rows.length) {
+    const cell = el('rows').insertRow().insertCell();
+    cell.colSpan = 4;
+    cell.textContent = translate('ما لقينا ملفات بلغات مدعومة في المجلد.', 'No files with supported languages were found.');
+  }
+  const skipped = format.format(report.files - report.included - report.failed);
+  const files = format.format(report.files);
+  const failed = format.format(report.failed);
+  el('details').textContent = translate(
+    `ملفات المجلد: ${files} · المستبعدة: ${skipped}` +
+      (report.failed ? ` · تعذّرت قراءة ${failed} ملف` : '') +
+      '. نحسب الأسطر غير الفارغة بما فيها التعليقات، ونتجاوز مجلدات الاعتماديات والبناء الشائعة.',
+    `Folder files: ${files} · Skipped: ${skipped}` +
+      (report.failed ? ` · Unreadable: ${failed}` : '') +
+      '. Counts include nonblank lines and comments. Common dependency and build folders are skipped.'
+  );
+}
+function renderHistory() {
+  el('history').replaceChildren();
+  el('history-actions').hidden = !history.length;
+  updateSelection();
+  for (const report of history) {
+    const item = document.createElement('li');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = selected.has(report);
+    checkbox.setAttribute('aria-label', translate('تحديد', 'Select') + ' ' + report.name + ' · ' + formatDate(report.date));
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) selected.add(report);
+      else selected.delete(report);
+      updateSelection();
+    });
+    item.append(checkbox);
+    const button = document.createElement('button');
+    const label = document.createElement('bdi');
+    label.textContent = report.name;
+    const time = document.createElement('time');
+    time.dateTime = report.date;
+    time.textContent = formatDate(report.date);
+    const summary = document.createElement('small');
+    const lines = format.format(report.rows.reduce((sum, row) => sum + row.lines, 0));
+    const files = format.format(report.included);
+    summary.textContent = translate(`${lines} سطر · ${files} ملف كود`, `Lines: ${lines} · Code files: ${files}`);
+    button.append(label, time, summary);
+    button.addEventListener('click', () => {
+      render(report);
+      status = '';
+      renderStatus();
+    });
+    item.append(button);
+    el('history').append(item);
+  }
+}
+el('choose').addEventListener('click', () => el('files').click());
+el('files').addEventListener('change', async event => {
+  const files = Array.from(event.target.files);
+  event.target.value = '';
+  if (!files.length) return;
+  el('choose').disabled = true;
+  try {
+    const report = await analyze(files, (index, count) => {
+      status = 'progress';
+      progress = [format.format(index), format.format(count)];
+      renderStatus();
+    });
+    history = [report, ...history];
+    try {
+      localStorage.setItem(storeKey, JSON.stringify(history));
+      status = 'saved';
+    } catch {
+      status = 'temporary';
+    }
+    render(report);
+    renderHistory();
+  } catch {
+    status = 'failed';
+  } finally {
+    renderStatus();
+    el('choose').disabled = false;
+  }
+});
+el('language').addEventListener('click', () => {
+  english = !english;
+  try { localStorage.setItem('satr.language', translate('ar', 'en')); } catch {}
+  renderLanguage();
+});
+currentReport = history[0] || example;
+renderLanguage();
+</script>
+</body>
+</html>
