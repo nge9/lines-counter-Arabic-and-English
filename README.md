@@ -1,0 +1,1 @@
+# lines-counter-Arabic-and-English
